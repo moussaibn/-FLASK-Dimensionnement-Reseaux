@@ -1,0 +1,11 @@
+{% extends "Accueil/index.html.twig" %}
+{% block vue %}
+
+<h3>Oups !!!</h3> 
+<h5> La valeur <strong>{{ valeur }}</strong>  est une {{ erreur }}</h5>
+
+	<img rel=stylesheet type=image src="{{ url_for('static', filename='erreur1.jpg')}}" alt={{ erreur }}/><br />
+
+	<a href= {{ vue }} ><span><-Precedent</span></a>
+
+{% endblock %}

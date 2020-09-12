@@ -1,0 +1,65 @@
+
+	<!DOCTYPE html>
+	<html>
+	    <head>			        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+
+	        <meta charset="UTF-8" />
+	        <title>{% block title %}{% endblock %}</title>
+	        {% block stylesheets %}
+			       	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}"/>
+					<link rel=stylesheet type=text/css href="{{ url_for('static', filename='nav.css') }}"/>
+					<link rel=stylesheet type=text/css href="{{ url_for('static', filename='tiles.css') }}"/>
+					<link rel=stylesheet type=text/css href="{{ url_for('static', filename='your.css') }}"/>
+					<link rel=stylesheet type=text/css href="{{ url_for('static', filename='themes/theme_default/theme.css') }}"/>
+					<link rel=stylesheet type=text/css href="{{ url_for('static', filename='position.css') }}"/>
+					<link rel=stylesheet type=text/css href="{{ url_for('static', filename='menu.css') }}"/>
+
+	   		 	 {% endblock %}
+	    </head>
+		<body>	
+			<div id="headerWrapper">
+				<div id="header">
+					<div id="headerTitles">
+						<h1><a href="{{ url_for('index') }}">{% block titre_page %}{% endblock %}</a>
+						</h1>
+							<h2>{% block description %}{% endblock %}	</h2>
+				 	</div>
+					  <!-- entete de la page -->
+					<div id="nav">
+			  			<a id="slideshows" class="navItem navActive"   href="{{ url_for('index') }}">
+			  				<img rel=stylesheet type=image src="{{ url_for('static', filename='home.png')}}" alt="Accueil"/><br />
+				  					Accueil
+						</a>
+					</div>
+				</div>	
+			</div>
+		 
+			<div id="wrapper">
+				<div id="contentWrapper" class="pageContent">
+						<div id=content>
+							<div id='cssmenu'>
+		<ul>
+			<li class='has-sub'><a href="{{ url_for('index') }}"><span>Accueil</span></a>
+			<li class='has-sub'><a href="{{ url_for('Dim') }}"><span>Modelisation de la file d'attente </span></a></li>
+			
+					
+			<li class='has-sub'><a href="{{ '#' }}"><span>Les lois d'Erlang</span></a>
+				<ul>
+					<li class='has-sub'><a href="{{ url_for('ErlangB') }}"><span>Erlang B</span></a></li>
+					<li class='has-sub'><a href="{{ url_for('ErlangC')}}"><span>Erlang C</span></a></li>
+		      	</ul>
+		   	</li>
+		   	
+			<li class='has-sub'><a href="{{ url_for('Auteur') }}"><span>Auteur</span></a></li>
+
+		</ul>
+	</div>
+										{% block vue %}{% endblock %}	
+						</div>
+				</div>
+					<a id="footer" href="http://" title="AMAM" alt=" AMAM DIC1 TR ">
+						 &nbsp &nbsp Copyright Aliou Moussa &nbsp &nbsp
+					</a>
+			</div>
+		</body>			
+	</html>

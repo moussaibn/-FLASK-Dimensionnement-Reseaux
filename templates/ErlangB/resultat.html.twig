@@ -1,0 +1,18 @@
+{% extends "ErlangB/index.html.twig" %}
+{% block res %}
+  
+  <h2>Resultat</h2>
+  <div style="text-align: center;">
+	<table align="center" bgcolor="#ff8c00" width="65%" >
+		<tr>
+			<td><h4>Le trafic offert = <mark>{{ trafic }}</mark> </h4> </td>
+		</tr>
+		<tr>
+			<td><h4>Le nombre de circuit =<mark>{{ nbreCircuit}}</mark> </h4></td>
+		</tr>
+		<tr>
+			<td><h4>Le taux de blocage =<mark> {{ tauxBlocage }}% </mark> </h4></td>
+		</tr>
+	</table>
+</div>
+{% endblock %}

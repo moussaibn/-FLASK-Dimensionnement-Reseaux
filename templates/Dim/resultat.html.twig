@@ -1,0 +1,32 @@
+{% extends "Dim/index.html.twig" %}
+{{ parent }}
+{% block res %}
+    <h2>Resultat</h2>
+    {% if theta > 1 %}
+        Erreur lambda doit etre inferieur a mu
+    {% else %}
+		<div style="text-align: center;">
+			<table align="center" bgcolor="#ff8c00" width="80%" >
+				<tr>
+					<td><h5>Lambda=<mark>{{ val_lambda }}</mark> mu=<mark>{{ val_mu }}</mark> s=<mark>{{ val_s }}</mark> </h5> </td>
+				</tr>
+				<tr>
+					<td><h5>La probabilite d'avoir 0 messsage Po = <mark>{{ Po }}</mark> </h5> </td>
+				</tr>
+				<tr>
+					<td><h5>Le nombre moyen de clients dans la file d'attente nu = <mark>{{ nu }}</mark> </h5></td>
+				</tr>
+				<tr>
+					<td><h5>Le nombre moyen de clients dans le systéme n = <mark>{{ n }}</mark> </h5></td>
+				</tr>
+				<tr>
+					<td><h5>Le temps moyen d'attente dans la file d'attente tf =<mark>{{ tf }}</mark> </h5></td>
+				</tr>
+				<tr>
+					<td><h5>Le nombre de serveur(s) non occupé(s) rho =<mark>{{ rho }}</mark> </h5></td>
+				</tr>
+			</table>
+		</div>       
+    {% endif %}
+       
+{% endblock %}

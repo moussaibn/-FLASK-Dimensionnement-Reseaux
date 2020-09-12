@@ -1,0 +1,24 @@
+{% extends "Accueil/base.html.twig" %}
+
+	{% block title %} Dimensionnement Reseaux {% endblock %}
+	
+	{% block titre_page %} Dimensionnement des Reseaux {% endblock %}
+	
+	{% block description %} {% endblock %}  
+ 
+	{% block vue %}<h2>Presentation des auteurs</h2>
+	<div width="40%">
+	<img rel=stylesheet type=image src="{{ url_for('static', filename='IMG_2606.png')}}" alt="Accueil"/><br />
+	<h5>Nom:<strong>Ndiaye</strong></h5>
+	<h5>Prenom:<strong>Moussa</strong></h5>
+	<h5>age:<strong>21 ans</strong></h5>
+	<h5>Classe:<strong>DIC 1 Telecoms et Reseaux</strong></h5>
+	</div>
+	<div width="40%">
+		<img rel=stylesheet type=image src="{{ url_for('static', filename='aliou.png')}}" alt="Accueil"/><br />
+	<h5>Nom:<strong>Diallo</strong></h5>
+	<h5>Prenom:<strong>Aliou</strong></h5>
+	<h5>age:<strong>22 ans</strong></h5>
+	<h5>Classe:<strong>DIC 1 Telecoms et Reseaux</strong></h5>
+	</div>
+	</p>{% endblock %}

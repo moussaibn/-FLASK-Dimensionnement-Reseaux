@@ -1,0 +1,30 @@
+{% extends "Accueil/index.html.twig" %}
+
+{% block vue %}
+<h2>ErlangB</h2><br/>
+   <form action="{{ url_for('CalculerErlangb') }}" method=post >
+      <div style="text-align: center;">
+			<table align="center" bgcolor="#ff8c00" width="65%" >
+				<tr>
+					<td>Trafic</td><td><input type=text size=22 name=toff /></td>
+				</tr>
+				<tr>
+					<td>Nombre de Circuits</td><td><input type=text size=22 name=ndc /></td>
+				</tr>
+				<tr>
+					<td>Probabilité de blocage</td><td><input type=text size=22 name=tdb /></td>
+				</tr>
+        		<tr text-align="center">
+					<td><input type=submit value=Valider></td>
+					<td><input type=reset value=Effacer></td>
+				</tr>
+      		</table>
+      </div>
+    </form><br/>
+
+   <div >
+    <!-- code du contenu de la page -->
+  {% block res %}{% endblock %}
+  </div>
+
+{% endblock %}

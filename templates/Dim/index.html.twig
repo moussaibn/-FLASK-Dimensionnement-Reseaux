@@ -1,0 +1,30 @@
+{% extends "Accueil/index.html.twig" %}
+ 
+{% block vue %}
+	<h2 xmlns="http://www.w3.org/1999/html">{% block intitule %} Modelisation de la file d'attente {% endblock %}</h2><br/>
+		<form action="{{ url_for('evaluerDim') }}" method=post >
+			<div style="text-align: center;">
+				<table align="center" bgcolor="#ff8c00" width="65%" >
+					<tr>
+						<td>lambda</td><td><input type=text size=12 name=lambda required/></td><td>Client(s)/min</td>
+					</tr>
+					<tr>
+						<td>mu</td><td><input type=text size=12 name=mu required/></td><td>Client(s)/min</td>
+					</tr>
+					<tr>
+						<td>S</td><td><input type=text size=12 name=s required/></td><td>Serveuers</td>
+					</tr>
+	        		<tr text-align="center">
+						<td><input type=submit value=Valider></td><td></td>
+						<td><input type=reset value=Effacer></td>
+					</tr>
+	      		</table>
+			</div>
+	    </form><br/>
+
+		<div >
+	    <!-- code du contenu de la page -->
+			{% block res %}{% endblock %}
+		</div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "Accueil/index.html.twig" %}
+{% block vue %}
+<h2>ErlangC</h2><br/>
+   <form action="{{ url_for('CalculerErlangC') }}" method=post >
+      <div style="text-align: center;">
+			<table align="center" bgcolor="#ff8c00" width="65%" >
+				<tr>
+					<td>Trafic Offert</td><td><input type=text size=22 name=a /></td>
+				</tr>
+				<tr>
+					<td>Le nombre de circuit</td><td><input type=text size=22 name=n /></td>
+				</tr>
+				<tr>
+					<td>Probabilité d'attente</td><td><input type=text size=22 name=prob /></td>
+				</tr>
+        		<tr text-align="center">
+					<td><input type=submit value=Valider></td>
+					<td><input type=reset value=Effacer></td>
+				</tr>
+      		</table>
+      </div>
+    </form><br/>
+
+   <div >
+    <!-- code du contenu de la page -->
+  {% block res %}{% endblock %}
+  </div>
+
+{% endblock %}
