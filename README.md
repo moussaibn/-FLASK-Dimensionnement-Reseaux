@@ -12,5 +12,5 @@ The main Erlang traffic model are listed below, with links to my free online Erl
 ### Erlang B
 The most commonly used traffic model, it estimates how many lines you need if you know the traffic figure (in Erlangs) during your busiest hour.
 
-## Erlang C
+### Erlang C
 This traffic model assumes that all blocked calls stay in the system until they can be handled. You can apply it to the design of call center staffing arrangements where calls enter a queue if they are not answered immediately.
