@@ -19,7 +19,6 @@ def index():
 
 
 
-
 #############MOI#################
 @app.route('/auteur')
 def Auteur():
